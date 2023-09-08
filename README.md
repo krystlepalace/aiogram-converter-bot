@@ -1,5 +1,5 @@
 # Media-converter bot
- Telegram bot that allow user to convert any media files to any formats
+ Telegram bot that allows user to convert any media files to any formats
 
 [<img src="https://img.shields.io/badge/Telegram-%40converter__media__bot-blue">](https://t.me/converter_media_bot)
 [![wakatime](https://wakatime.com/badge/user/4d0cc4aa-e1c1-483b-8c80-199c9ea5d0c5/project/45475bdb-2f59-4d7a-b6aa-c7372321c08f.svg)](https://wakatime.com/badge/user/4d0cc4aa-e1c1-483b-8c80-199c9ea5d0c5/project/45475bdb-2f59-4d7a-b6aa-c7372321c08f.svg)
