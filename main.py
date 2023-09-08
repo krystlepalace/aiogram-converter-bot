@@ -1,7 +1,7 @@
 import asyncio
 from aiogram import Bot, Dispatcher
 from config import CONFIG
-from handlers import base
+from handlers import base, media_handler
 from utils.commands import set_commands
 
 
@@ -12,6 +12,7 @@ async def main():
     dp = Dispatcher()
 
     dp.include_routers(base.router,
+                       media_handler.router
                        )
 
     await set_commands(bot)
