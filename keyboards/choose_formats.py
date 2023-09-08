@@ -7,7 +7,7 @@ audio_formats = ['MP3', 'WAV', 'OGG',
                  'AMR', 'OPUS', 'AIFF']
 photo_formats = ['PNG', 'JPG', 'JPEG',
                  'BMP', 'GIF', 'WEBP',
-                 'SVG', 'ICO', 'HDR']
+                 'SVG', 'ICO', 'TIFF']
 
 
 def audio_formats_builder():
