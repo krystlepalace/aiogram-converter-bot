@@ -2,6 +2,7 @@ import asyncio
 from aiogram import Bot, Dispatcher
 from config import CONFIG
 from handlers import base, media_handler
+from handlers.callbacks import converter_callback
 from utils.commands import set_commands
 
 
@@ -12,7 +13,8 @@ async def main():
     dp = Dispatcher()
 
     dp.include_routers(base.router,
-                       media_handler.router
+                       media_handler.router,
+                       converter_callback.router
                        )
 
     await set_commands(bot)
