@@ -1,6 +1,7 @@
 from aiogram import Router, F
-from aiogram.types import CallbackQuery
+from aiogram.types import CallbackQuery, FSInputFile
 from aiogram.filters.callback_data import CallbackData
+from utils.photo_converter import PhotoConverter
 from pathlib import Path
 from config import CONFIG
 import main
@@ -28,6 +29,12 @@ async def process_image_convert(callback: CallbackQuery,
     file_on_disk = Path(f"{CONFIG.media_full_path}{file_id}.{file_path.split('.')[-1]}")
     await main.bot.download_file(file_path, destination=file_on_disk)
 
-    await callback.message.answer("File downloaded.")
-    os.remove(file_on_disk)
+    # convertation
+    converter = PhotoConverter(file_on_disk.__str__())
+    await converter.convert_photo(callback_data.format)
+
+    await main.bot.send_document(chat_id=callback.from_user.id,
+                                 document=FSInputFile(converter.output_path))
+
     await callback.answer()
+    os.remove(file_on_disk)
