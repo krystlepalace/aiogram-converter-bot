@@ -20,6 +20,7 @@
 1. Python 3.11 or higher
 
 ### Basic startup
+If you have FFMPEG in your $PATH, then in FFMPEG_PATH put just 'ffmpeg'
 Just fill .env and run this commands:
 ```bash
 pip install -r requirements.txt

@@ -5,7 +5,7 @@ from pydantic import SecretStr
 
 class Settings(BaseSettings):
     bot_token: SecretStr
-    # ffmpeg_path: Optional[str]
+    ffmpeg_path: Optional[str]
     media_full_path: Optional[str]
 
     class Config:
