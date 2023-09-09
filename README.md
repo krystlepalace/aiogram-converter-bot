@@ -28,3 +28,10 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+
+### Systemd
+Work-in-progress
+
+## TODO
+1. Convert GIF into video
+2. Systemd .service file
