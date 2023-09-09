@@ -12,6 +12,9 @@ __pycache__/
 # media files
 media/
 
+# ffmpeg
+utils/ffmpeg.exe
+
 # Distribution / packaging
 .Python
 build/
