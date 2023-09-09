@@ -8,8 +8,11 @@ audio_formats = ['MP3', 'WAV', 'OGG',
 photo_formats = ['PNG', 'JPG', 'JPEG',
                  'BMP', 'GIF', 'WEBP',
                  'SVG', 'ICO', 'TIFF']
+video_formats = ["MP4", "MP3", "GIF",
+                 "AVI", "MOV", "WEBM",
+                 "M4A", "MPEG", "WMV"]
 
-
+#refactor 3 builders into one
 def audio_formats_builder():
     builder = InlineKeyboardBuilder()
     for format in audio_formats:
@@ -26,6 +29,17 @@ def photo_formats_builder():
     for format in photo_formats:
         builder.button(text=format, callback_data=FormatCallback(
             format=format.lower(), type='PHOTO'
+        ).pack())
+    builder.adjust(3)
+
+    return builder
+
+
+def video_formats_builder():
+    builder = InlineKeyboardBuilder()
+    for format in video_formats:
+        builder.button(text=format, callback_data=FormatCallback(
+            format=format.lower(), type='VIDEO'
         ).pack())
     builder.adjust(3)
 
