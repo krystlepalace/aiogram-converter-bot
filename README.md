@@ -30,7 +30,11 @@ python main.py
 ```
 
 ### Systemd
-Work-in-progress
+Replace '.example' from converter-bot.service.example so it's just converter-bot.service. 
+ Then just copy service file to /etc/systemd/system/ 
+ ```bash 
+ sudo systemctl start converter-bot.service 
+ ```
 
 ## TODO
 1. Convert GIF into video
