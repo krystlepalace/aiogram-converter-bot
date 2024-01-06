@@ -17,7 +17,7 @@ MEDIA_FORMATS = {
 
 def formats_keyboard_builder(format_name):
   builder = InlineKeyboardBuilder()
-  for format in FORMATS[format_name]:
+  for format in MEDIA_FORMATS[format_name]:
       builder.button(text=format, callback_data=FormatCallback(
           format=format.lower(), type=format_name
       ).pack())
