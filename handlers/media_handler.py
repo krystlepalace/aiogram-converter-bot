@@ -6,7 +6,7 @@ from keyboards.choose_formats import formats_keyboard_builder
 router = Router()
 
 
-@router.message(F.photo)
+@router.message(F.photo | F.sticker)
 async def convert_photo(message: Message):
     await message.reply("Formats: ",
                         reply_markup=formats_keyboard_builder(format_name="PHOTO").as_markup())
